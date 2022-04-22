@@ -47,7 +47,7 @@ number -= 1; /*Subtract then equals*/
 number *= 1; /*Multiply then equals*/
 number /= 1; /*Divide then equals*/
 
-/*Using quotes within string*/
+/*Using Quotes within String*/
 var string = 'Hello "my" friend!'; /*Hello "my" Friend*/
 var string = "Hello 'my' friend";
 var string = ` "He'llo' "my" 'frie'nd" `; /*allows literal use of " and ' */
@@ -64,7 +64,7 @@ var string = ` "He'llo' "my" 'frie'nd" `; /*allows literal use of " and ' */
 \f - form freed 
 */
 
-/*Examples of string concentation*/
+/*Examples of String Concentation*/
 var firstName = "John"
 var lastName = "Doe"
 var fullName = firstName + lastName /*"John Doe"*/
@@ -85,7 +85,7 @@ var greeting = "Hello, my name is " + myName + ". Its nice to meet you."
  myNameLength = myName.length
  myNameLength = 4
 
-/*Finding character at specific index of string*/
+/*Finding Character at Specific Index of String*/
 myName="John";
 firstLetterOfMyName = myName[0] /*J*/
 
@@ -94,7 +94,7 @@ var brokenString = "Jello World"
 /*Can not change characters of a string, must be replaced*/
 var brokenString = "Hello World"
 
-/*Finding -nth / last character of a string*/
+/*Finding -nth / Last Character of a String*/
 var greeting = "Hello, how are you today?"
 greetingLastLetter = greeting[greeting.length - 1]; /*?*/
 
@@ -119,5 +119,79 @@ var parentArray = [["John",25,"Male" ],["Jane", 30, "Female"], ["Fido", 5, "Male
 var myData = myArray[0] /*John*/
 
 /*Indexing Nested Array*/
-var parentData = parentArray[1[1]] /*30*/
+var parentData = parentArray[1][1] /*30*/
 
+/*Modifying Array*/
+myArray[1] = 30 
+
+/*Adding Item to Array*/
+parentArray.push(["Ash", 60,"non-binary"])
+/*[["John",25,"Male" ],["Jane", 30, "Female"], ["Fido", 5, "Male-Dog"], ["Ash", 60,"non-binary"]]*/
+
+/*Remove Last Element from Array and collect item*/
+var Removed_Gender = myArray.pop() /*Male*/
+var myArray = ["John",25]
+ 
+/*Remove First Element of Array and collect item*/
+var removedName = myArray.shift()
+
+/*Adding Element to the beginning of Array */ 
+myArray.shift /*[25, "Male"]*/
+myArray.unshift("James")  /*["James", 25, "Male"]*/
+
+/*module Functions*/
+function ourReusableFunction() {
+    console.log("Hello World")
+}
+ourReusableFunction;
+
+/*Passing Value to Functions with Arguments */
+function ourReusableFunctionWithArgs(a,b) {
+    console.log(a-b);
+}
+ourReusableFunctionWithArgs(4,2); /*2*/
+
+/*Returning a functions value*/
+function additon(a,b) {
+    return a + b
+}
+
+/*A Function wihtout return value is "Undefined"*/
+
+/*Assigning return value to Variable.*/
+
+var sum = additon(4,6); /*10*/
+
+/*Boolean*/
+function trueStatement() {
+    return true
+}
+
+/*If Statement*/
+isItTrue = true
+function ourTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+        return "Yes, its true"
+    }
+    else {
+        return "No, that was false"
+    }
+}
+
+/*Comparison Operators*/
+function testEqual(val) {
+    if (val == 12) {
+        return "equal"
+    }
+    else {
+        return "not equal"
+    }
+}
+
+/*Equality and Strict Equality*/
+num1 = 3
+num2 = "3"
+num1 == num2;   /*True*/
+num1 ===num2;  /*False*/
+
+/*https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1s*/ /*1:15:38*/
